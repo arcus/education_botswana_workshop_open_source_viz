@@ -21,7 +21,7 @@ library(countdown)
 
 ```
 
-## Our Topics for This Talk
+# Our Topics for This Talk
 
 We're going to talk about **Open Source Software** and **Data Visualization** in this talk.
 
@@ -34,7 +34,11 @@ We're going to talk about **Open Source Software** and **Data Visualization** in
 :::
 :::
 
-## About Your Presenter {.smaller}
+::: notes
+Hi everyone, thanks for joining us for this data analysis workshop!  My name is Joy Payton and in this talk, I'll be going over two topics: Open Source Software, represented by the image on the left, with the open book, and Data Visualization, represented by the image on the right, of lots of different kinds of data visualizations.
+:::
+
+# About Your Presenter {.smaller}
 
 ::: {.columns .v-center-container}
 ::: {.column width="50%"}
@@ -47,22 +51,33 @@ Joy is a data educator who teaches scientists and health care workers how to wri
 
 Please reach out!  LinkedIn: [https://www.linkedin.com/in/joypayton/](https://www.linkedin.com/in/joypayton/)
 
+::: notes
+This is just a little about me.  I enjoy teaching data analysis topics and I love getting to know learners and get to learn from you, as well.  Please feel free to connect with me and ask me questions on LinkedIn!
+:::
 
-## Open Source
+# Open Source
 
-**Source** code (how the software is made) is **open** (people can modify it and use it without restrictions).
+**Source** code (how the software is made) is **open** (people can modify it and use it without restrictions).  Because the source code is publicly available, anyone can use the software for free.
 
-![](media/market-map-open-source-image.png)
+![](media/market-map-open-source-image.png){fig-align="center"}
 
 ::: notes
-First, a definition.  What is "Open Source" software (sometimes called "Free Open Source Software" or FOSS)?  It's software in which the software maker has decided to give away for free not just the software itself, but also the information about how the software is made (like the "source code").  Software makers also agree to let people use the software in any way they want, including letting people make changes to how the software works to make it better for their uses.
+First, a definition.  What is "Open Source" software (sometimes called "Free Open Source Software" or FOSS)?  It's software in which the software maker has decided to give away for free not just the software itself, but also the information about how the software is made (the "source code").  Software makers also agree to let people use the software in any way they want, including letting people make changes to how the software works to make it better for their uses.
 :::
 
 ## Discuss
 
-Question: is Microsoft Office open source software?  Why or why not?
+Question: is Microsoft Word open source software?  Why or why not?
 
-![](media/microsoft-word-365-online.png)
+![](media/microsoft-word-365-online.png){fig-align="center"}
+
+```{r}
+countdown(minutes = 1, seconds = 0)
+```
+
+::: notes
+If you said that Microsoft Word is not open source software, you're correct.  Microsoft does not make the source code for Word public and freely available, nor do they give their software away for free.  
+:::
 
 ## Two Kinds of Free {.smaller}
 
@@ -70,7 +85,11 @@ Question: is Microsoft Office open source software?  Why or why not?
 
 Question: is all software you can download for free (like the Chrome browser) considered open source?  Why or why not?
 
-![](media/chrome.png)
+```{r}
+countdown(minutes = 1, seconds = 0)
+```
+
+![](media/chrome.png){fig-align="center"}
 
 ::: notes
 "Free" as in beer (it costs zero pula) and "free" as in speech (you can do what you want with it and you won't get in trouble).  This matters for low resource settings (college students who can't afford expensive software, small organizations with only a little budget, researchers just starting a new lab, people who want to practice data analytics but don't have a job where they have the fancy tools).
@@ -86,16 +105,20 @@ Note that there is definitely a lot of software out there that is free of charge
 * RStudio and the R Language (data analysis)
 * Jupyter and the Python Language (data analysis)
 
+::: notes
+Here are some Open Source solutions you may have heard of before.  In these three days, you'll be working a lot in Jupyter and the Python language!  This is an open source solution that helps with Data Analysis.  Let's switch gears a bit, in fact, and talk about how you might **currently** do data analysis.
+:::
+
 ## Data Analysis Tools {.smaller}
 
-Let's take a three minute pause and please turn to the folks near you and discuss this question:
+Let's take a pause and please turn to the folks near you and discuss this question:
 
 >If I were to give you a table of patient data from a DHMT, which included body measurements (such as arm circumference, height, and weight) for 500 two year old children and some information about their mothers (such as age at first childbirth, level of education, marital status, HIV status, etc.), what program or method would you use to decide if any of the characteristics of the mothers influenced the measurements of the children?
 
 Feel free to mention software you might use or describe how you would use paper records or other methods.
 
 ```{r}
-countdown(minutes = 3, seconds = 0)
+countdown(minutes = 4, seconds = 0)
 ```
 
 ## Some Answers {.smaller}
@@ -107,6 +130,10 @@ Here are some of the answers you might have given:
 * Epidemiologist?  You might have mentioned Stata to do some statistical testing by category (like teenage parenthood versus adult parenthood)
 * Social scientist?  Maybe you prefer SPSS to do your statistical tests.
 
+::: notes
+There are lots of ways to analyze data, and I have two slides with a few examples.
+:::
+
 ## Some Answers (Continued) {.smaller}
 
 Here are some of the answers you might have given:
@@ -117,21 +144,30 @@ Here are some of the answers you might have given:
 * Maybe you'd just call your local statistician or demographer to do this work, because you're not sure how to even start!
 * Other things I didn't think about
 
+::: notes
+And here are a few more!
+:::
+
 
 ## Things to Consider {.smaller}
 
 Let's add some real life constraints here.
 
 * Whatever method you use should be easily repeatable by other people.  You should be able to hand off your analysis to other DHMTs or people in other countries with different systems so they can do the same analysis on their early childhood data.
-* Data will be added at least once a year and you want to be able to redo the analysis quickly without having to spend a lot of time
+* Data will be added at least once a year and you want to be able to redo the analysis quickly
 * You have to do this very cheaply (you're going to share your methods with colleagues in Chad and South Sudan who have very few resources)
 * The data you're analyzing is private and can't be shared 
 
-Take another two minutes and discuss: with these new constraints, does your solution still fit?
-
 ```{r}
-countdown(minutes = 2, seconds = 0)
+countdown(minutes = 3, seconds = 0)
 ```
+
+::: notes
+Let's consider some real life constraints.  You need your data analysis plan to fulfill some requirements listed here.
+
+Take another three minutes and discuss: with these new constraints, does your solution still fit?
+:::
+
 
 ## Another Definition: Reproducibility {.smaller}
 
@@ -146,6 +182,10 @@ If, instead, I leave out some ingredients, or make my recipe with strange ingred
 ::: {.column width="30%"}
 ![](media/horse.png)
 :::
+:::
+
+::: notes
+If you've ever tried to make something, like build something out of wood, or make a recipe, or anything that has a lot of steps, you might have experienced something like the instructions on the right... people who skip a lot of steps and make it impossible for you to redo what they did.  It's frustrating!
 :::
 
 ## Why Does Reproducibility Matter? {.smaller}
@@ -212,16 +252,70 @@ EHRs / EMRs can have analysis tools inside, but what if your EHR is just for Bot
 
 * Maybe you'd analyze this using a statistical programming language like R or Python
 
-R and Python are free, open source languages.  R is a language that was developed specifically for analyzing data.  Python is a language that can do lots of things, and among them is data analysis.  The great thing about these languages is that you write computer code that does each step of your analysis, and you save the steps in a "script" (a list of steps).  That means that when you have to re-do your analysis a year later, all you have to do is run that script on the new data.  It's also easy to share a script in these languages, and because these are free software, anyone in the world can use them.
+R and Python are free, open source languages.  
+
+The great thing about these languages is that you write computer code that does each step of your analysis, and you save the steps in a "script" (a list of steps).
 
 BUT... writing computer code?!?!?!  That requires some learning!  And that's why we're here today.  
+
+::: notes
+R and Python are free, open source languages.  R is a language that was developed specifically for analyzing data.  Python is a language that can do lots of things, and among them is data analysis.  The great thing about these languages is that you write computer code that does each step of your analysis, and you save the steps in a "script" (a list of steps).  That means that when you have to re-do your analysis a year later, all you have to do is run that script on the new data.  It's also easy to share a script in these languages, and because these are free software, anyone in the world can use them.
+:::
 
 ## Comparing Possible Answers: a Statistician {.smaller}
 
 * Maybe you'd just call your local statistician or demographer to do this work, because you're not sure how to even start!
 
-A statistician might choose to use R, or Python, or Excel, or Stata, or SPSS, or another solution like SAS or Matlab or ... any number of things!  A professional statistician or demographer can be a helpful consultant, but not every team can afford an asset like this, and the analysis they write may or may not be able to be re-run easily a year later or shareable with groups with fewer resources.
+A statistician might choose to use R, or Python, or Excel, or Stata, or SPSS, or another solution like SAS or Matlab or ... any number of things!  
 
-## Comparing Possible Answers: Other Stuff 
+
+::: notes
+A professional statistician or demographer can be a helpful consultant, but not every team can afford an asset like this, and the analysis they write may or may not be able to be re-run easily a year later or shareable with groups with fewer resources.
+:::
+
+## Comparing Possible Answers: Other Solutions {.smaller} 
 
 What else did you come up with?  Can you think of the pros and cons of those solutions?  I'll pause here for a bit to give you a chance to think about it.
+
+## Summary {.smaller} 
+
+Open Source Software is better than point and click data analysis because:
+
+* It's free!
+* Anyone can download and use it without a license or money
+* You can make a reproducible script
+
+You're going to learn how to use Python to do data analysis!
+
+## Data Visualization
+
+Data Visualization is a way to transmit information about data using images like bar charts, scatter plots, and other graphs.
+
+### Why Explore With Data Visualization?
+
+It can be hard to go through a lot of data and understand at a glance what it all means.  But a graph can give you a lot of information at a glance.  Consider the graphic below. 
+
+![](media/covid_cases_nyc.png){fig-align="center"}
+
+```{r}
+countdown(minutes = 3, seconds = 0)
+```
+
+::: notes
+Take a few minutes and discuss what you can tell about COVID cases in New York City, 2020-2023.  Consider that the graphic you're looking at represents over 3 million cases over 3 years (> 1000 days).  
+:::
+
+### Types of Visualizations
+
+![](media/types_of_data_viz.png)
+
+### Visual Signal
+
+You can change lots of things in a data visualization:
+
+* Change the color of dots to represent sex
+* Change the size of a dot to represent the size of the community
+* Make the lines for 2023 solid and the line for expected 2024 dotted
+* Make dots different shapes: square for Maun, circle for Gaborone
+* Change the color scheme of the visualization
+* Make bars vertical or horizontal
