@@ -1,0 +1,4 @@
+- source: open_source_and_visualization.qmd
+  quarto-pub:
+    - id: 3bbd6748-ad55-4ffe-bdac-3814734d1760
+      url: 'https://quartopub.com/sites/joy-payton/open-source-software-and-data-visualization'

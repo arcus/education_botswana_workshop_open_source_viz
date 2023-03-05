@@ -1,28 +1,104 @@
 ---
-title: "open_source_and_visualization"
+title: "Open Source Software and Data Visualization"
 author: "Joy Payton"
+format: 
+  revealjs:
+    theme: [serif, custom.scss]
+    scrollable: true
+    footer: Children's Hospital of Philadelphia (CHOP)
+    css: styles.css
 ---
+
+
+* Use keyboard arrow keys to 
+  - advance ( → ) and 
+  - go back  ( ← )
+* Type "s" to see speaker notes
+* Type "?" to see other keyboard shortcuts
+
+```{r echo = FALSE}
+library(countdown)
+
+```
+
+## Our Topics for This Talk
+
+We're going to talk about **Open Source Software** and **Data Visualization** in this talk.
+
+::: {.columns .v-center-container}
+::: {.column width="50%"}
+![](media/education-engineers-software-opensource.jpeg)
+:::
+::: {.column width="50%"}
+![](media/data_viz.jpeg)
+:::
+:::
+
+## About Your Presenter {.smaller}
+
+::: {.columns .v-center-container}
+::: {.column width="50%"}
+Joy is a data educator who teaches scientists and health care workers how to write code, use version control, and visualize data.  In her spare time she enjoys video games and singing in a chorus.  
+:::
+::: {.column width="50%"}
+![](media/joy_payton.jpeg)
+:::
+:::
+
+Please reach out!  LinkedIn: [https://www.linkedin.com/in/joypayton/](https://www.linkedin.com/in/joypayton/)
+
 
 ## Open Source
 
-First, a definition.  What is "Open Source" software (sometimes called "Free Open Source Software" or FOSS)?
+**Source** code (how the software is made) is **open** (people can modify it and use it without restrictions).
 
-## Two Kinds of Free
+![](media/market-map-open-source-image.png)
 
-"Free" as in beer and "free" as in speech.  This matters for low resource settings (college students who can't afford expensive software, small organizations with only a little budget, researchers just starting a new lab, people who want to practice data analytics but don't have a job where they have the fancy tools)
+::: notes
+First, a definition.  What is "Open Source" software (sometimes called "Free Open Source Software" or FOSS)?  It's software in which the software maker has decided to give away for free not just the software itself, but also the information about how the software is made (like the "source code").  Software makers also agree to let people use the software in any way they want, including letting people make changes to how the software works to make it better for their uses.
+:::
 
-## Examples of Open Source
+## Discuss
 
+Question: is Microsoft Office open source software?  Why or why not?
 
-## What About Data Analysis?
+![](media/microsoft-word-365-online.png)
 
-There are lots tools you can use in data analysis.  Let's take a three minute pause and please turn to the folks near you and discuss this question:
+## Two Kinds of Free {.smaller}
 
->If I were to give you a table of patient data from a DHMT, which included body measurements (such as arm circumference, height, and weight) for 500 two year old children and some information about their mothers (such as age at first childbirth, level of education, marital status, HIV status, etc.), what program or method would you use to decide if any of the characteristics of the mothers influenced malnutrition in the children?
+"Free" as in beer and "free" as in speech.  
+
+Question: is all software you can download for free (like the Chrome browser) considered open source?  Why or why not?
+
+![](media/chrome.png)
+
+::: notes
+"Free" as in beer (it costs zero pula) and "free" as in speech (you can do what you want with it and you won't get in trouble).  This matters for low resource settings (college students who can't afford expensive software, small organizations with only a little budget, researchers just starting a new lab, people who want to practice data analytics but don't have a job where they have the fancy tools).
+
+Note that there is definitely a lot of software out there that is free of charge, like the Chrome browser, which isn't fully open source.
+:::
+
+## Examples of Open Source {.smaller}
+
+* The Linux operating system
+* LibreOffice (an alternative to Microsoft Office)
+* Mozilla Firefox (a web browser)
+* RStudio and the R Language (data analysis)
+* Jupyter and the Python Language (data analysis)
+
+## Data Analysis Tools {.smaller}
+
+Let's take a three minute pause and please turn to the folks near you and discuss this question:
+
+>If I were to give you a table of patient data from a DHMT, which included body measurements (such as arm circumference, height, and weight) for 500 two year old children and some information about their mothers (such as age at first childbirth, level of education, marital status, HIV status, etc.), what program or method would you use to decide if any of the characteristics of the mothers influenced the measurements of the children?
 
 Feel free to mention software you might use or describe how you would use paper records or other methods.
 
-## Some Answers
+```{r}
+countdown(minutes = 3, seconds = 0)
+```
+
+## Some Answers {.smaller}
 
 Here are some of the answers you might have given:
 
@@ -30,6 +106,11 @@ Here are some of the answers you might have given:
 * Upload data to Google Sheets and do some graphs there to show differences
 * Epidemiologist?  You might have mentioned Stata to do some statistical testing by category (like teenage parenthood versus adult parenthood)
 * Social scientist?  Maybe you prefer SPSS to do your statistical tests.
+
+## Some Answers (Continued) {.smaller}
+
+Here are some of the answers you might have given:
+
 * Maybe you weren't sure how you'd answer this question and would use your own eyes to look through the data and detect trends by just looking at the table and coming up with some hypotheses
 * You might have an electronic health record that you use to analyze data like this by category
 * Maybe you'd analyze this using a statistical programming language like R or Python
@@ -37,7 +118,7 @@ Here are some of the answers you might have given:
 * Other things I didn't think about
 
 
-## Things to Consider:
+## Things to Consider {.smaller}
 
 Let's add some real life constraints here.
 
@@ -48,53 +129,86 @@ Let's add some real life constraints here.
 
 Take another two minutes and discuss: with these new constraints, does your solution still fit?
 
-## Another Definition: Reproducibility
+```{r}
+countdown(minutes = 2, seconds = 0)
+```
 
-A data analysis is "reproducible" if it can be redone with relative ease.  For example, if I write down all the steps of how to make chocolate cake, such that you (who have very little experience baking cakes) can make a chocolate cake, that's a "reproducible" recipe.  If, instead, I assume you understand some steps, or leave out some ingredients, or make my recipe with strange ingredients you can't get, or make my instructions hard to understand, that recipe is "irreproducible" (not reproducible).
+## Another Definition: Reproducibility {.smaller}
+
+::: {.columns .v-center-container}
+::: {.column width="70%"}
+A data analysis is "reproducible" if it can be redone with relative ease.  
+
+For example, if I write down all the steps of how to make chocolate cake, such that you (who have very little experience baking cakes) can make a chocolate cake, that's a "reproducible" recipe.  
+
+If, instead, I leave out some ingredients, or make my recipe with strange ingredients you can't get, or make my instructions hard to understand, that recipe is "irreproducible" (not reproducible).
+:::
+::: {.column width="30%"}
+![](media/horse.png)
+:::
+:::
+
+## Why Does Reproducibility Matter? {.smaller}
 
 It's important in science to make our data analysis "recipes" as reproducible as possible, so that other people we work with can do the same analysis, we can do the same analysis again with new data, and we can share our analysis with other people in the health care and research world who can check our work and re-use our approaches for their own data!
 
-## Our Problem
+## Our Problem {.smaller}
 
 >If I were to give you a table of patient data from a DHMT, which included body measurements (such as arm circumference, height, and weight) for 500 two year old children and some information about their mothers (such as age at first childbirth, level of education, marital status, HIV status, etc.), what program or method would you use to decide if any of the characteristics of the mothers influenced malnutrition in the children?
 
-## Comparing Possible Answers: Excel
+## Comparing Possible Answers: Excel {.smaller}
 
 * Use Excel and use filters to specific data for different categories (like mothers with and without HIV) and use formulas to get averages of child measurements for each group
 
+::: {.columns .v-center-container}
+::: {.column width="70%"}
 Excel is *not* open source.  While it's not free, it's not terribly expensive.  But you will probably end up doing a lot of "point and click" work to filter data, make pivot tables, add visualizations, etc.  Those steps will be annoying to write down and describe for other users.
+:::
+::: {.column width="30%"}
+![](media/excel.png)
+:::
+:::
 
-## Comparing Possible Answers: Google Sheets
+
+## Comparing Possible Answers: Google Sheets {.smaller}
 
 * Upload data to Google Sheets and do some graphs there to show differences
 
+::: {.columns .v-center-container}
+::: {.column width="70%"}
 Google Sheets is not open source and it requires an internet connection, which might not be available to your colleagues in Chad and South Sudan.  It also means uploading sensitive health data to the world's most influential and powerful data broker, Google... not a great idea!
+:::
+::: {.column width="30%"}
+![](media/google_sheets.png)
+:::
+:::
 
-## Comparing Possible Answers: Stata
+
+## Comparing Possible Answers: Stata {.smaller}
 
 * Epidemiologist?  You might have mentioned Stata to do some statistical testing by category (like teenage parenthood versus adult parenthood)
 
 Stata costs a few hundred USD, so it's not the most expensive software, but it's potentially out of reach for low resource settings.  You can use point-and-click with Stata, which has the same problems as point-and-click with Excel (remembering to write down all the steps in detail so another person can do exactly the same thing).  But Stata also has a programming language and you can record your steps as a script (computer code that records each step you do).  That's an improvement over Excel!
 
-## Comparing Possible Answers: SPSS
+## Comparing Possible Answers: SPSS {.smaller}
 
 * Social scientist?  Maybe you prefer SPSS to do your statistical tests.
 
 Like Stata, SPSS costs money, in the hundreds of USD.  Also, SPSS is mostly a point-and-click software with the same issues that we've mentioned before.  But you can record SPSS syntax files (if you remember to do it) that make it easier to redo the same steps.
 
-## Comparing Possible Answers: Manual Review
+## Comparing Possible Answers: Manual Review {.smaller}
 
 * Maybe you weren't sure how you'd answer this question and would use your own eyes to look through the data and detect trends by just looking at the table and coming up with some hypotheses
 
 What if I gave you data for 1500 patients? 15000?  Using your instincts and eyeballs can be useful for small data, but health care data is growing faster and faster.  It's also really hard to transmit your expertise or describe how you see trends and how patterns emerge for you just by looking at the data.
 
-## Comparing Possible Answers: EHR
+## Comparing Possible Answers: EHR {.smaller}
 
 * You might have an electronic health record that you use to analyze data like this by category
 
 EHRs / EMRs can have analysis tools inside, but what if your EHR is just for Botswana?  How could you share your analysis method with your peers in other countries?  Many EHRs are also proprietary (the opposite of open source, it means the software can't be changed and the company that makes the software controls it and doesn't share how it works).
 
-## Comparing Possible Answers: Languages like R and Python
+## Comparing Possible Answers: Languages like R and Python {.smaller}
 
 * Maybe you'd analyze this using a statistical programming language like R or Python
 
@@ -102,12 +216,12 @@ R and Python are free, open source languages.  R is a language that was develope
 
 BUT... writing computer code?!?!?!  That requires some learning!  And that's why we're here today.  
 
-## Comparing Possible Answers: a Statistician
+## Comparing Possible Answers: a Statistician {.smaller}
 
 * Maybe you'd just call your local statistician or demographer to do this work, because you're not sure how to even start!
 
 A statistician might choose to use R, or Python, or Excel, or Stata, or SPSS, or another solution like SAS or Matlab or ... any number of things!  A professional statistician or demographer can be a helpful consultant, but not every team can afford an asset like this, and the analysis they write may or may not be able to be re-run easily a year later or shareable with groups with fewer resources.
 
-## Comparing Possible Answers: Other Stuff
+## Comparing Possible Answers: Other Stuff 
 
 What else did you come up with?  Can you think of the pros and cons of those solutions?  I'll pause here for a bit to give you a chance to think about it.

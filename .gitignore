@@ -2,5 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-
+.DS_Store
 /.quarto/
+/open_source_and_visualization_files/
