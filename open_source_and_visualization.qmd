@@ -80,7 +80,7 @@ If you said that Microsoft Word is not open source software, you're correct.  Mi
 
 ## Two Kinds of Free {.smaller}
 
-"Free" as in beer and "free" as in speech.  
+"Free" as in lunch and "free" as in speech.  
 
 Question: is all software you can download for free (like the Chrome browser) considered open source?  Why or why not?
 
@@ -91,7 +91,7 @@ countdown(minutes = 1, seconds = 0)
 ![](media/chrome.png){fig-align="center"}
 
 ::: notes
-"Free" as in beer (it costs zero pula) and "free" as in speech (you can do what you want with it and you won't get in trouble).  This matters for low resource settings (college students who can't afford expensive software, small organizations with only a little budget, researchers just starting a new lab, people who want to practice data analytics but don't have a job where they have the fancy tools).
+We like to talk about two kinds of free: "Free" as in lunch (it costs zero pula) and "free" as in speech (you can do what you want with it and you won't get in trouble).  This matters for low resource settings (university students who can't afford expensive software, small organizations with only a little budget, researchers just starting a new lab, people who want to practice data analytics but don't have a job where they have the fancy tools).
 
 Note that there is definitely a lot of software out there that is free of charge, like the Chrome browser, which isn't fully open source.
 :::
