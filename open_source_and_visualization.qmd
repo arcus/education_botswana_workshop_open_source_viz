@@ -9,7 +9,6 @@ format:
     css: styles.css
 ---
 
-
 * Use keyboard arrow keys to 
   - advance ( → ) and 
   - go back  ( ← )
@@ -42,7 +41,7 @@ Hi everyone, thanks for joining us for this data analysis workshop!  My name is 
 
 ::: {.columns .v-center-container}
 ::: {.column width="50%"}
-Joy is a data educator who teaches scientists and health care workers how to write code, use version control, and visualize data.  In her spare time she enjoys video games and singing in a chorus.  
+Joy Payton (she/her) is a data educator who teaches scientists and health care workers how to write code, use version control, and visualize data.  In her spare time she enjoys video games and singing in a chorus.  
 :::
 ::: {.column width="50%"}
 ![](media/joy_payton.jpeg)
@@ -228,13 +227,35 @@ Google Sheets is not open source and it requires an internet connection, which m
 
 * Epidemiologist?  You might have mentioned Stata to do some statistical testing by category (like teenage parenthood versus adult parenthood)
 
-Stata costs a few hundred USD, so it's not the most expensive software, but it's potentially out of reach for low resource settings.  You can use point-and-click with Stata, which has the same problems as point-and-click with Excel (remembering to write down all the steps in detail so another person can do exactly the same thing).  But Stata also has a programming language and you can record your steps as a script (computer code that records each step you do).  That's an improvement over Excel!
+::: {.columns .v-center-container}
+::: {.column width="70%"}
+Stata is more expensive than Excel.  You can use point-and-click with Stata, which has the same problems as point-and-click with Excel (remembering to write down all the steps in detail so another person can do exactly the same thing).  But Stata also includes a scripted language.
+:::
+::: {.column width="30%"}
+![](media/stata.png)
+:::
+:::
+
+::: notes
+Stata costs a few hundred USD, so it's not the most expensive software, but it's potentially out of reach for low resource settings.  You can use point-and-click with Stata, which has the same problems as point-and-click with Excel (remembering to write down all the steps in detail so another person can do exactly the same thing).  But Stata also has a programming language and you can record your steps as a script (computer code that records each step you do).  That's an improvement over Excel and Google Sheets!
+:::
 
 ## Comparing Possible Answers: SPSS {.smaller}
 
 * Social scientist?  Maybe you prefer SPSS to do your statistical tests.
 
+::: {.columns .v-center-container}
+::: {.column width="70%"}
 Like Stata, SPSS costs money, in the hundreds of USD.  Also, SPSS is mostly a point-and-click software with the same issues that we've mentioned before.  But you can record SPSS syntax files (if you remember to do it) that make it easier to redo the same steps.
+:::
+::: {.column width="30%"}
+![](media/spss.png)
+:::
+:::
+
+::: notes
+Like Stata, SPSS costs money, in the hundreds of USD.  Also, SPSS is mostly a point-and-click software with the same issues that we've mentioned before.  But you can record SPSS syntax files (if you remember to do it) that make it easier to redo the same steps.
+:::
 
 ## Comparing Possible Answers: Manual Review {.smaller}
 
@@ -252,6 +273,16 @@ EHRs / EMRs can have analysis tools inside, but what if your EHR is just for Bot
 
 * Maybe you'd analyze this using a statistical programming language like R or Python
 
+::: {.columns .v-center-container}
+::: {.column width="70%"}
+
+:::
+::: {.column width="30%"}
+![](media/)
+:::
+:::
+
+
 R and Python are free, open source languages.  
 
 The great thing about these languages is that you write computer code that does each step of your analysis, and you save the steps in a "script" (a list of steps).
@@ -265,6 +296,16 @@ R and Python are free, open source languages.  R is a language that was develope
 ## Comparing Possible Answers: a Statistician {.smaller}
 
 * Maybe you'd just call your local statistician or demographer to do this work, because you're not sure how to even start!
+
+::: {.columns .v-center-container}
+::: {.column width="70%"}
+
+:::
+::: {.column width="30%"}
+![](media/)
+:::
+:::
+
 
 A statistician might choose to use R, or Python, or Excel, or Stata, or SPSS, or another solution like SAS or Matlab or ... any number of things!  
 
@@ -287,11 +328,11 @@ Open Source Software is better than point and click data analysis because:
 
 You're going to learn how to use Python to do data analysis!
 
-## Data Visualization
+# Data Visualization
 
 Data Visualization is a way to transmit information about data using images like bar charts, scatter plots, and other graphs.
 
-### Why Explore With Data Visualization?
+## Why Explore With Data Visualization?
 
 It can be hard to go through a lot of data and understand at a glance what it all means.  But a graph can give you a lot of information at a glance.  Consider the graphic below. 
 
@@ -305,11 +346,11 @@ countdown(minutes = 3, seconds = 0)
 Take a few minutes and discuss what you can tell about COVID cases in New York City, 2020-2023.  Consider that the graphic you're looking at represents over 3 million cases over 3 years (> 1000 days).  
 :::
 
-### Types of Visualizations
+## Types of Visualizations
 
 ![](media/types_of_data_viz.png)
 
-### Visual Signal
+## Visual Signal
 
 You can change lots of things in a data visualization:
 
