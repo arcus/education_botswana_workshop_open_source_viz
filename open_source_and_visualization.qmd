@@ -1,5 +1,6 @@
 ---
 title: "Open Source Software and Data Visualization"
+subtitle: "https://bit.ly/open-source-data-viz"
 author: "Joy Payton"
 format: 
   revealjs:
@@ -348,7 +349,153 @@ Take a few minutes and discuss what you can tell about COVID cases in New York C
 
 ## Types of Visualizations
 
-![](media/types_of_data_viz.png)
+![](media/types_of_data_viz.png){fig-align="center"}
+
+## Categories of Visualizations
+
+There are so many ways to visualize data.  The first question you might want to ask is... what do I want to do?
+
+* See how a value is distributed
+* Compare two or more values to see which is bigger
+* See a relationship between two or more values
+
+## Distribution {.smaller}
+
+One way we understand data is to visualize how the data is **distributed**.  What we're looking for here is to understand the relative frequency of values on a continuous measure (something numerical with lots of possibilities)
+
+* Income -- lots of poverty and no middle class?  A few poor, a few rich, and lots in between?  Mean vs median?
+* Age -- many pensioners?  Or many children?
+* Marks -- everyone failing the class?  An even distribution?  A class everyone excels in?
+* Blood sugar -- what is the median blood sugar for healthy children?  
+* Medical errors -- evenly distributed across hospitals?  Or high spikes at some?
+
+
+## Distribution (Histogram)
+
+This is a histogram, or frequency diagram.  
+
+![](media/anatomy_of_histogram.png)
+
+
+## Distribution (Histogram) {.smaller}
+
+
+![](media/unlabeled_histogram.png){fig-align="center"}
+::: notes
+ For example, how is wealth distributed?  How many households make <3000 BWP/month?  How many make 3000-6000?  6000-9000? 9000-12000? etc...
+
+For example, what do you think we're measuring here?  What is at the middle of this bell-shaped curve?
+
+And this distribution, high in the middle, symmetrical, and bell-shaped, has a special name... do you k know what that is?
+
+:::
+
+
+```{r}
+countdown(minutes = 1, seconds = 0)
+```
+
+## Distribution (Box Plot)
+
+A box plot shows statisically important elements, like the median, interquartile range, and outliers.
+
+![](media/anatomy_of_boxplot.png){fig-align="center"}
+
+## Distribution (Box Plot)
+
+Here are some examples of box plots in Python:
+
+![](media/box_plots.png){fig-align="center"}
+## Distribution Discussion
+
+Take a couple of minutes and discuss the kind of data you work with.  What kinds of distributions do you want to look at?  Why does it matter how data is distributed?
+
+
+```{r}
+countdown(minutes = 3, seconds = 0)
+```
+
+## Relationship {.smaller}
+
+Another thing that we might want to visualize is the relationship between two variables.  For example, what is the relationship between IQ and height in adults? Probably none. What is the relationship between height and weight in adults?  Probably these two things are related -- tall people will tend to weigh more than short people.
+
+If I wanted to compare two variables, I might want to create a scatterplot, a heatmap, or other kinds of visualizations.  
+
+## Relationship (Scatterplot)
+
+This graph shows data about houses.  The x axis shows the size of the house and the y axis shows the sale price of the house.
+
+![](media/scatterplot_houses.png){fig-align="center"}
+
+::: notes
+What does this graph show?  Is there a relationship between the size of a house and the price a house sells for?  How many variables are shown here? 1, 2, 3, more?
+:::
+
+
+```{r}
+countdown(minutes = 1, seconds = 0)
+```
+
+## Relationship (Heatmap)
+
+A heat map uses color to show values in a grid formed by two values.  Let's take a look at an example:
+
+![](media/heatmap.png){fig-align="center"}
+
+::: notes
+What does this graph show?  Can you describe the history of flights for this data?  Where in the world do you think this data comes from? How many variables are shown here? 1, 2, 3, more?
+:::
+
+
+```{r}
+countdown(minutes = 1, seconds = 0)
+```
+
+## Relationship (Bubble Chart)
+
+A bubble chart is like a scatterplot but shows additional information, using the size of the dot to provide more information:
+
+![](media/bubble.png){fig-align="center"}
+
+::: notes
+What does this graph show?  Is there a relationship between GDP and life expectancy? How many variables are shown here? 1, 2, 3, more?
+:::
+
+
+```{r}
+countdown(minutes = 1, seconds = 0)
+```
+
+
+## Relationship Discussion
+
+Take a couple of minutes and discuss the kind of data you work with.  What kinds of relationships do you want to look at?  Are you looking at relationships of two variables? Three? More?
+
+```{r}
+countdown(minutes = 3, seconds = 0)
+```
+
+## Comparison {.smaller}
+
+Many times we want to compare data.  
+
+* Are men or women more likely to develop an alcohol addiction?  
+* Which countries have the highest rate of homicide?  
+* Which school has the highest rate of university admittance?
+* Which medication best controls hypertension?
+
+These may use data visualization types we've seen already, or may use different kinds of bar charts.
+
+## Comparison (Bar Charts)
+
+Here's a simple bar chart.  
+
+![](media/simple_bar.png){fig-align="center"}
+## Comparison (Grouped Bar Chart)
+
+You can also use grouped bar charts.
+
+![](media/grouped-bar-chart-pandas-matplotlib.png){fig-align="center"}
 
 ## Visual Signal
 
